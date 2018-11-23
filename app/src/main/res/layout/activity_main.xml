@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="23dp"
+    tools:context=".activity.MainActivity"
+    tools:ignore="MissingPrefix">
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片视频选择功能" />
+
+    <Button
+        android:id="@+id/bt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="RecyclerView 自动滚动(带动画)"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="GreenDao功能(多变关联查询)"
+        android:textAllCaps="false" />
+
+
+</LinearLayout>

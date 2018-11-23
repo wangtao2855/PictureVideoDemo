@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_launcher_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity"
+    tools:ignore="MissingPrefix">
+
+    <include layout="@layout/base_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nes_scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <sj.keyboard.widget.EmoticonsEditText
+                android:id="@+id/issue_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:hint="说点什么吓吓别人吧……"
+                android:textColor="#6e6e6e"
+                android:textColorHint="#6e6e6e"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <cn.jzvd.JzvdStd
+                    android:id="@+id/videoplayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="188dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/issue_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/zhaopian" />
+
+            <ImageView
+                android:id="@+id/issue_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/biaoqing" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/il_emoji"
+            layout="@layout/view_keyboard_emoticon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

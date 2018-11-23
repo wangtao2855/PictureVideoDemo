@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEEF1"
+    android:orientation="vertical">
+
+
+    <sj.keyboard.widget.EmoticonsFuncView
+        android:id="@+id/view_epv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_eiv"
+        android:orientation="vertical" />
+
+    <com.example.home.picturevideodemo.view.MyEmoticonsIndicatorView
+        android:id="@+id/view_eiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_etv"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/indicator_margin" />
+
+    <sj.keyboard.widget.EmoticonsToolBarView
+        android:id="@+id/view_etv"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical" />
+</RelativeLayout>

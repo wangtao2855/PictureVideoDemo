@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.home.picturevideodemo"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+greendao {
+    schemaVersion 2
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation project(':picture_library')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:design:28.0.0'
+
+    //黄油刀
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //图片框架(最近版本改了很多api，很多东西都会对不上号)
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //shape select 的点击绘制工具类
+    implementation 'com.noober.background:core:1.2.5'
+
+    //支持表情的emoji的库
+    implementation 'com.github.w446108264:XhsEmoticonsKeyboard:2.0.4'
+    implementation 'com.github.w446108264:AndroidEmoji:1.0.0'
+
+    //今日头条适配方案
+    implementation 'me.jessyan:autosize:1.0.5'
+
+    //支持视频播放的控件 （后面2行是为了支持ijkplayer的播放引擎）
+    implementation 'cn.jzvd:jiaozivideoplayer:6.3.1'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
+    //各种形状的imageView(这边必须同时也得支持gif)
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //图片点击放大
+    implementation 'com.ycjiang:ImagePreview:2.2.1'
+    implementation 'com.jaeger.ninegridimageview:library:1.1.1'
+    //工作类
+    implementation 'com.blankj:utilcode:1.20.3'
+    //grrenDao数据库
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+    //这是RecyclerView的进一步封装 还不错哦
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+}
