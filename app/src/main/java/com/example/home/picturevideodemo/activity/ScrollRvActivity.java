@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.SizeUtils;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.home.picturevideodemo.R;
 import com.example.home.picturevideodemo.adapter.ScrollRvAdapter;
 
@@ -63,6 +64,8 @@ public class ScrollRvActivity extends AppCompatActivity {
         initData();
         recyclerVer.setLayoutManager(new LinearLayoutManager(this));
         ScrollRvAdapter scrollRvAdapter = new ScrollRvAdapter(mList);
+        scrollRvAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
+        scrollRvAdapter.isFirstOnly(false);
         recyclerVer.setAdapter(scrollRvAdapter);
 
         mTimer = new Timer();
